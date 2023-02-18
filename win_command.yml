@@ -1,0 +1,7 @@
+---
+- name: Retrieve list of installed software on Windows hosts
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Run PowerShell script to retrieve installed software
+      win_shell: C:\path\to\script\get_installed_apps.ps1
